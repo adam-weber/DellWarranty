@@ -27,3 +27,9 @@ Explanation of the required wrapper information:
   * **xml** - XML list
   * **json** - JSON list
 
+Images
+------
+In the case that manual input is not desired or a code39 capable barcode scanner is not available, I have included support for images to be used. The idea is to pass an image of the barcode to js, the image of the barcode is read and passes the information contained in the barcode to the wrapper. Acting as a mock barcode scanner.
+
+The image may be sent as a blob, base64 image, or image object. As everything is client side, the image is not retained.
+
