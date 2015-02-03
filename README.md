@@ -15,19 +15,15 @@ Wrapper
 -------
 The Javascript wrapper can be called with:
 
-`DellApi(callType, svctag, apiKey)`
+`DellApi(svcTag, apiKey, dataType)`
 
 Explanation of the required wrapper information:
 
-* **callType** - Type of API request to be sent. Choices:
-  * Dispatch Request - Create and manage dispatch requests
-    * *dispatch*
-  * Warranty - Check warranty expiration
-    * *warranty*
-  * Support Case - Create support cases and receive updates
-    * *support*
-* **svctag** - Dell product servica tag.
+* **svctag** - Dell product service tag.
   * Resources included to enter manually, with barcode scanner, or with an image.
 * **apiKey** - Dell API key
-
+* **dataType** - Return data type.
+  * **table** - Formatted HTML table containing just the warranties
+  * **xml** - XML list
+  * **json** - JSON list
 
