@@ -1,35 +1,42 @@
 # Dell Warranty App & Wrapper
 
-Client-side application and wrapper to make full use of the Dell API. 
+Javascript wrapper to facilitate the easy use of the Dell Warranty API.
 
 Features
 =========
-* Web application that makes full use of the Dell API
-* Javascript wrapper to be used when building an application that utilizes the Dell API
-
-Application
------------
-The web app includes support for desktop and mobile devices. Desktop mode allows input to be taken from the keyboard or a barcode scanner. The scanner needs to support Code39 so it can read the barcode on 2011 and newer Dells. The mobile version of the web app includes support for a camera on the mobile device. A photo can be taken of the barcode which then looks up information on the computer.
+* Under 1KB, extremely lightweight.
+* Client side wrapper capabale of returning a json, xml, or html object. The html object is a table containing values. 
+* Demo application that makes use of the js wrapper, integrating the html object with an appendable table.
+* Support for multiple dell service tags.
+* **[COMING SOON]** - Support for mobile devices: i.e. photos of barcodes.
 
 Wrapper
 -------
 The Javascript wrapper can be called with:
 
-`DellApi(svcTag, apiKey, dataType)`
+`warranty(svcTag, apiKey, dataType)`
 
 Explanation of the required wrapper information:
 
 * **svctag** - Dell product service tag.
-  * Resources included to enter manually, with barcode scanner, or with an image.
+  * Can accept individual tags, or multiple tags seperated by a pipe - '|'.
 * **apiKey** - Dell API key
 * **dataType** - Return data type.
   * **table** - Formatted HTML table containing just the warranties
   * **xml** - XML list
   * **json** - JSON list
 
-Images
-------
-In the case that manual input is not desired or a code39 capable barcode scanner is not available, I have included support for images to be used. The idea is to pass an image of the barcode to js, the image of the barcode is read and passes the information contained in the barcode to the wrapper. Acting as a mock barcode scanner.
+**All attributes should be sent as strings.** 
 
-The image may be sent as a blob, base64 image, or image object. As everything is client side, the image is not retained.
+Error Handling
+---------------
+There is a limited amount of error handling included with the wrapper. If there is an error, you will most likely be directed to the console to check it out for yourself. Refer to the FAQ below for more common issues.
+
+FAQ
+----
+**Q. Error - 'Access-Control-Allow-Origin' header is present on the requested resource...**
+
+A. If the application is running on a web server, it must be sending the Access-Control-Allow-Origin headers - *CORS*. If this is being run **locally**, consider installing the [CORS Chrome extension](http://goo.gl/oQNhwh) for an easy fix. This may open security holes[^1].
+
+[^1]: If the site is accessible by the public and still located within an organization, an attacker could potentially send a COR to the page and copy the response. Although I do not see that as being a problem with the information being sent here. [More Information](https://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity#Potential_Security_Concerns_with_COR).
 
