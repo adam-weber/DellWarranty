@@ -26,7 +26,7 @@ Explanation of the required wrapper information:
   * **xml** - XML object - unparsed
   * **json** - JSON object - unparsed
 
-**All attributes should be sent as strings.** 
+**All arguments should be sent as strings.** 
 
 Dependencies
 ------------
