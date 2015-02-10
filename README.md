@@ -32,6 +32,8 @@ Dependencies
 ------------
 The wrapper was written to be very small. If you plan on returning the html table from the wrapper, you must also include the jquery dateFormat library. This is to improve readability as the date is returned as a date/time in ISO 8610 format. In the demo application it is loaded from [CloudFlare CDN](https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.min.js), I would recommend the same. 
 
+[CORS Chrome extension](http://goo.gl/oQNhwh) is needed if the application/wrapper is run locally. See FAQ below for more information.
+
 Error Handling
 ---------------
 There is a limited amount of error handling included with the wrapper. If there is an error, you will most likely be directed to the console to check it out for yourself. Refer to the FAQ below for more common issues.
