@@ -40,7 +40,7 @@ There is a limited amount of error handling included with the wrapper. If there 
 
 FAQ
 ----
-**Q. Error - 'Access-Control-Allow-Origin' header is present on the requested resource...**
+**Q. Error - No 'Access-Control-Allow-Origin' header is present on the requested resource...**
 
 **A.** If the application is running on a web server, it must be sending the Access-Control-Allow-Origin headers - *CORS*. If this is being run **locally**, consider installing the [CORS Chrome extension](http://goo.gl/oQNhwh) for an easy fix. This may open security holes[^1].
 
