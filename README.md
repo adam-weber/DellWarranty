@@ -23,8 +23,8 @@ Explanation of the required wrapper information:
 * **apiKey** - Dell API key
 * **dataType** - Return data type.
   * **table** - Formatted HTML table containing just the warranties
-  * **xml** - XML list
-  * **json** - JSON list
+  * **xml** - XML object - unparsed
+  * **json** - JSON object - unparsed
 
 **All attributes should be sent as strings.** 
 
