@@ -18,7 +18,7 @@ The Javascript wrapper can be called with:
 
 Explanation of the required wrapper information:
 
-* **svctag** - Dell product service tag.
+* **svcTag** - Dell product service tag.
   * Can accept individual tags, or multiple tags seperated by a pipe - '|'.
 * **apiKey** - Dell API key
 * **dataType** - Return data type.
