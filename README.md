@@ -14,7 +14,7 @@ Wrapper
 -------
 The Javascript wrapper can be called with:
 
-`warranty(svcTag, apiKey, dataType)`
+`getWarranty(svcTag, apiKey, dataType)`
 
 Explanation of the required wrapper information:
 
