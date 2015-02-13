@@ -5,8 +5,6 @@
   
   For information/examples, see README
   https://github.com/adam-weber/DellWarranty
-  
-  DellApi(svcTag, apiKey, dataType)
 */
 options = ['ServiceLevelDescription', 'ServiceProvider', 'StartDate', 'EndDate']
 
