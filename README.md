@@ -28,6 +28,14 @@ Explanation of the required wrapper information:
 
 **All arguments should be sent as strings.** 
 
+Example Application
+--------------------
+The included example application takes advantage of the ability to return a formatted HTML table with small changes made to the wrapper js. 
+**API KEY** - In example.js within the application is where the wrapper exists. One of the parameters is an API key for Dell. The one in there is just "for show". You will need to request a key from Dell to test the application. 
+
+**Screen-shots**
+![Image of Application - populated with information](http://i.gyazo.com/f9cafb58913748063e402d37ca4be167.png)
+
 Dependencies
 ------------
 The wrapper was written to be very small. If you plan on returning the html table from the wrapper, you must also include the jquery dateFormat library. This is to improve readability as the date is returned as a date/time in ISO 8610 format. In the demo application it is loaded from [CloudFlare CDN](https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.min.js), I would recommend the same. 
