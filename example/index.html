@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <title>Dell Warranty Lookup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 id="print-tag"></h1>
+  <div id="header">
+    <div id="logo">
+      <a href="http://www.ccisystems.com">
+        <img alt="cciLogo" src="images/logo.png">
+      </a>
+    </div>
+    <div id="header-top">
+      <p>Dell Warranty Lookup</p>
+    </div>
+    <div id="header-content">
+      <form id="warranty-search">
+        <input type="text" id="svctag-input" placeholder="Service Tag...">
+        <input id="submit" type="submit" value="GO!">
+      </form>
+      <div id="device-information">
+        <h4 id="svcTag"></h4>
+        <a onclick="window.print()">
+          <p>Print</p>
+        </a>
+      </div>
+      <div id="version">
+        <p>V1.0.2</p>
+      </div>
+    </div>
+  </div>
+  <div id="table">
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.min.js"></script>
+  <script type="text/javascript" src="js/dell-api.js"></script>
+  <script type="text/javascript" src="js/example.js"></script>
+</body>
+</html>
