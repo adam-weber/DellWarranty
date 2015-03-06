@@ -28,7 +28,7 @@ function getWarranty(svcTag, apiKey, dataType) {
 function apiRequest(requestType) {
   requestType = requestType != 'table' ? requestType : 'xml'
   jQuery.ajax({
-    url: "https://api.dell.com/support/v2/assetinfo/warranty/tags." + requestType + "?svctags=" + warranty.tag + "&apikey=" + warranty.key + "",
+    url: "https://api.dell.com/support/v2/assetinfo/warranty/tags."+requestType+"?svctags="+warranty.tag+"&apikey="+warranty.key+"",
     async: true,
     type: 'GET',
     success: function(response) {
@@ -53,12 +53,7 @@ function processData(response) {
       while(--i) {
         for(var j in options){
           current = doc[i].getElementsByTagName(options[j])[0].childNodes[0].nodeValue
-          if(pattern.test(current)){
-            tableHTML += "<td>"+ $.format.date(current, "MM/dd/yyyy") +"</td>"
-          }
-          else {
-            tableHTML += "<td>"+current+"</td>" 
-          }
+          tableHTML += pattern.test(current) ? "<td>"+ $.format.date(current,"MM/dd/yyyy")+"</td>" : "<td>"+ current+"</td>"
         }
         tableHTML += "</td></tr>"
       }

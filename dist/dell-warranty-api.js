@@ -51,11 +51,7 @@ function processData(response) {
       while (--i) {
         for (var j in options) {
           current = doc[i].getElementsByTagName(options[j])[0].childNodes[0].nodeValue
-          if (pattern.test(current)) {
-            tableHTML += "<td>" + $.format.date(current, "MM/dd/yyyy") + "</td>"
-          } else {
-            tableHTML += "<td>" + current + "</td>"
-          }
+          tableHTML += pattern.test(current) ? "<td>"+ $.format.date(current,"MM/dd/yyyy")+"</td>" : "<td>"+ current+"</td>"
         }
         tableHTML += "</td></tr>"
       }
