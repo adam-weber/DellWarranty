@@ -26,7 +26,7 @@ function getWarranty(svcTag, apiKey, dataType) {
 function apiRequest(requestType) {
   requestType = requestType != 'table' ? requestType : 'xml'
   jQuery.ajax({
-    url: "https://sandbox.api.dell.com/support/v2/assetinfo/warranty/tags." + requestType + "?svctags=" + warranty.tag + "&apikey=" + warranty.key + "",
+    url: "https://api.dell.com/support/v2/assetinfo/warranty/tags." + requestType + "?svctags=" + warranty.tag + "&apikey=" + warranty.key + "",
     async: true,
     type: 'GET',
     success: function(response) {
